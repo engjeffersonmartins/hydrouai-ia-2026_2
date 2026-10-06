@@ -15,7 +15,7 @@ from pathlib import Path
 
 ## Definindo o diretório de trabalho
 
-dir_path = Path.cwd() / "02_Shapefiles"
+dir_path = Path(r"C:\Users\niewi\Documents\GitHub\hydrouai-ia-2026_2\02_Aulas\Aula01\Parte_02\02_Shapefiles")
 
 print(dir_path)
 
