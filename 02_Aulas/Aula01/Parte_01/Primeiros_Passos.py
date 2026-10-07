@@ -23,8 +23,8 @@ ARQUIVO_COORDENADAS = PASTA / 'coordenadas_CEMADEN_RMBH.csv'
 ARQUIVO_MALHA = PASTA / 'municipios_RMBH.gpkg'
 
 # %% 3. Ler os dois CSVs e explorar os DataFrames
-chuva = pd.read_csv(ARQUIVO_CHUVA, parse_dates=['data'], index_col='data')
-coordenadas = pd.read_csv(ARQUIVO_COORDENADAS, dtype={'estacao': str})
+chuva = pd.read_csv(ARQUIVO_CHUVA, sep=';', parse_dates=['data'], index_col='data')
+coordenadas = pd.read_csv(ARQUIVO_COORDENADAS, sep=';', dtype={'estacao': str})
 chuva.columns = chuva.columns.astype(str)
 chuva = chuva.sort_index()
 print(chuva.head())
