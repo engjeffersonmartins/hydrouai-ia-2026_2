@@ -30,7 +30,7 @@ T = 1  # Horizonte de previsão: prever Q_Afluente no tempo t+T
 # Criamos a variável-alvo deslocando Q_Afluente em T passos à frente.
 # Linhas com valores faltantes são removidas.
 
-df = pd.read_csv(r'G:\Meu Drive\Escola de Verão 2026\Quarta Feira\Redes Neurais MLP\dataset_filled.csv').drop(columns=["data"])
+df = pd.read_csv(r'C:\Users\niewi\Documents\GitHub\hydrouai-ia-2026_2\02_Aulas\Aula03\series_preenchidas.csv').drop(columns=["data"])
 df["target"] = df["Q_Afluente"].shift(-T)
 df.dropna(inplace=True)
 
@@ -79,8 +79,6 @@ class MLP(nn.Module):
 
     def forward(self, x):
         return self.model(x)
-
-
 
 # %%
 # ==================================================

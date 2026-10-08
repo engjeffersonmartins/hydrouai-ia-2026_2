@@ -21,7 +21,7 @@ neuron_options = [32, 64,128]
 # %% ==========================================================
 # Seção 2: Carregamento e Pré-processamento dos Dados
 # =============================================================
-df = pd.read_csv("dataset_filled.csv").drop(columns=["data"])
+df = pd.read_csv(r"C:\Users\niewi\Documents\GitHub\hydrouai-ia-2026_2\02_Aulas\Aula03\series_preenchidas.csv").drop(columns=["data"])
 df["target"] = df["Q_Afluente"].shift(-T)
 df.dropna(inplace=True)
 
